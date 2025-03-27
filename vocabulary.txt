@@ -1,0 +1,125 @@
+Printer: máy in
+Air conditioner: điều hòa
+Elevator: thang máy
+Procedure: quy định,thủ tục
+Affordable: giá cả phải chăng
+In charge of: chịu trách nhiệm
+Recur: lặp lại, diễn ra lại
+Reduction: sự giảm xuống
+Provider: nhà cung cấp
+Initiative: sự khởi sướng, bắt đầu, chiến lược
+Outdated: lỗi thời
+Appreciate: trân trọng
+Reinforce: củng cố
+Exposed to: tiếp xúc với
+Casual: tự nhiên, không trịnh trọng
+Practice: luyện tập
+abandon: bỏ rơi
+access: truy cập
+accommodate: đáp ứng, chu cấp
+accommodation: nơi ở
+allocate: phân chia, phân bổ, phân phối
+allocated: đã được phân bổ
+allocation: sự phân bổ
+arrangement: kế hoạch
+assist: hỗ trợ
+association: tổ chức
+attend: đến dự
+attendance: sự góp mặt, sự tham gia
+attendee: người tham dự
+compatible: tương thích
+Delete: Xóa
+Display: trưng bày
+duplicate: bảng sao,sao chép lại
+duplication: quá trình chép lại
+failure: sự thất bại
+fallible: có thể sai sót
+Figure out: Tìm ra,hiểu ra
+Get in touch: Liện hệ
+Hold: Tổ chức
+ignorance: sự thiếu hiểu biết
+ignore: phớt lờ
+Location: Địa điểm
+Overcrowded: Đông đúc
+register: sổ đăng ký,danh sách đăng ký
+registration: sự đăng ký
+Search: tìm kiếm
+Select: Lựa chọn
+Session: Phiên
+Shut down: Tắt,đóng
+Take part in: tham gia vào
+Warning: Cảnh báo
+Address: địa chỉ, giải quyết
+Avoid: tránh né
+avoidance: sự tránh né
+avoided: tránh
+characteristic: đặc tính
+characteristically: một cách đặc trưng
+characterize: đặc trưng
+consequence: hậu quả
+consider: cân nhắc
+considerable: đáng kể
+consideration: sự xem xét
+cover: bao gồm
+Demonstrate: trình bày
+demonstration: sự trình bày
+demonstrative: minh chứng
+Develop: phát triển
+developer: người phát triển
+development: sự phát triển
+Evaluate: đánh giá
+evaluation: sự đánh giá
+evaluator: người đánh giá
+expiration: sự hết hạn
+Gather: tập hợp
+implication: hàm ý
+implicit: có ngụ ý,ngầm
+imply: ngụ ý
+offer: (v) đề nghị,(n) lời đề nghị,bản đề nghị
+primarily: chủ yếu,trước tiên
+promise: (v) hứa,(n) lời cam kết,lời hứa
+Protect: bảo vệ
+protection: sự bảo vệ
+protective: mang tính bảo về
+reputable: có uy tín
+Reputation: danh tiếng
+reputed: có tiếng
+Require: yêu cầu
+requirement: yêu cầu
+requisite: cần thiết
+Risk: rủi ro
+strategic: mang tính chiến lược
+strategize: lập chiến lược
+Strategy: chiến lược
+strong: mạnh
+Substitute: người thay thế
+substituted: bị thay thế
+substitution: sự thay thế
+variety: đa dạng
+abide by: tuân theo
+agreement: hợp đồng,thỏa thuận
+assurance: đảm bảo
+attract: thu hút
+cancellation: sự hủy bỏ
+compare: so sánh
+compete: cạnh tranh
+consume: tiêu thụ
+convince: thuyết phục
+currently: hiện tại
+determine: xác định,quyết tâm
+engage: tham gia
+establish: thành lập
+fad: mốt nhất thời
+inspiration: sự truyền cảm hứng
+involved: có liên quan
+market: thị trường
+obligate: bắt buộc
+party: người tham gia,bên tham gia
+persuasion: sự thuyết phục
+productive: có hiệu quả
+profitable: có lợi,sinh lãi
+provision: sự cung cấp
+resolve: giải quyết
+satisfaction: sự hài lòng
+satisfy: làm hài lòng
+specify: sư phân loại,nêu rõ
