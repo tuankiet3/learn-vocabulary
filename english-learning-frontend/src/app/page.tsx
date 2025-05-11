@@ -14,6 +14,16 @@ const features = [
     hoverBg: "hover:bg-blue-200/50 dark:hover:bg-blue-700/50",
   },
   {
+    title: "Dịch Đoạn Văn",
+    description: "Luyện dịch đoạn văn và nhận phản hồi từ AI về bản dịch của bạn.",
+    href: "/translate-paragraph",
+    icon: "📝",
+    bgColor:
+      "bg-gradient-to-br from-indigo-100 to-indigo-200 dark:from-indigo-800 dark:to-indigo-900",
+    textColor: "text-indigo-800 dark:text-indigo-100",
+    hoverBg: "hover:bg-indigo-200/50 dark:hover:bg-indigo-700/50",
+  },
+  {
     title: "Học Điền Từ",
     description: "Nhìn nghĩa tiếng Việt, điền từ tiếng Anh tương ứng.",
     href: "/learn-fill-blank",
@@ -49,13 +59,24 @@ const features = [
     href: "/find-word-by-english-word",
     icon: "🔍",
     bgColor:
-      "bg-gradient-to-br from-red-100 to-red-200 dark:from-red-800 dark:to-red-900",
+      "bg-gradient-to-br from-red-100 to-red-200 dark:from-pink-600 dark:to-pink-700",
     textColor: "text-red-800 dark:text-red-100",
     hoverBg: "hover:bg-red-200/50 dark:hover:bg-red-700/50",
+  },
+  {
+    title: "Xóa Từ",
+    description: "Xóa từ vựng khỏi hệ thống bằng từ tiếng Anh.",
+    href: "/delete-word",
+    icon: "🗑️",
+    bgColor: "bg-gradient-to-br from-red-400 to-red-600 dark:from-red-800 dark:to-red-900",
+    textColor: "text-red-900 dark:text-red-100",
+    hoverBg: "hover:bg-red-500/50 dark:hover:bg-red-700/50",
   },
 ];
 
 export default function HomePage() {
+  console.log("API URL:", process.env.NEXT_PUBLIC_API_URL);
+
   return (
     <div className="container mx-auto px-4 py-12">
       <h1 className="text-4xl md:text-5xl font-bold text-center mb-10 md:mb-12 text-gray-800 dark:text-gray-100">

@@ -7,7 +7,7 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  darkMode: "class", // <<<--- Thêm dòng này
+  darkMode: "class",
   theme: {
     extend: {
       // Bạn có thể mở rộng theme ở đây (ví dụ: thêm màu sắc, font chữ)
