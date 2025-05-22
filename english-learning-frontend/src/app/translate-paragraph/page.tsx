@@ -73,18 +73,25 @@ export default function TranslateParagraphPage() {
       }
 
       const feedback = await response.json();
+      
+      console.log('API Feedback:', feedback); // Debug log
+      console.log('Feedback message:', feedback.message); // Debug log
 
-      setTranslationState((prev) => ({
-        ...prev,
-        translations: {
-          ...prev.translations,
-          [prev.currentSentenceIndex]: currentTranslation,
-        },
-        feedback: {
-          ...prev.feedback,
-          [prev.currentSentenceIndex]: feedback.message,
-        },
-      }));
+      setTranslationState((prev) => {
+        const newState = {
+          ...prev,
+          translations: {
+            ...prev.translations,
+            [prev.currentSentenceIndex]: currentTranslation,
+          },
+          feedback: {
+            ...prev.feedback,
+            [prev.currentSentenceIndex]: feedback.message,
+          },
+        };
+        console.log('New translation state:', newState); // Debug log
+        return newState;
+      });
 
       setCurrentTranslation("");
 
@@ -168,12 +175,67 @@ export default function TranslateParagraphPage() {
 
             {translationState.feedback[translationState.currentSentenceIndex] && (
               <div className="mb-4 p-4 bg-blue-50 dark:bg-blue-900/30 rounded-lg">
+                {/* Debug info - only visible in development */}
+                {process.env.NODE_ENV === 'development' && (
+                  <div className="mb-2 text-xs text-gray-500">
+                    Debug: {JSON.stringify(translationState.feedback[translationState.currentSentenceIndex])}
+                  </div>
+                )}
+                {translationState.feedback[translationState.currentSentenceIndex].toLowerCase().includes("rất cao") && (
+                  <div className="mb-4 p-4 bg-green-50 dark:bg-green-900/30 rounded-lg border border-green-200 dark:border-green-800">
+                    <div className="flex items-center justify-center">
+                      <svg className="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                      <h3 className="text-lg font-medium text-green-800 dark:text-green-200">
+                        Chúc mừng bạn! Bản dịch của bạn rất chính xác!
+                      </h3>
+                    </div>
+                  </div>
+                )}
                 <h3 className="font-medium text-blue-800 dark:text-blue-200 mb-2">
                   Phản hồi:
                 </h3>
-                <p className="text-blue-700 dark:text-blue-300">
-                  {translationState.feedback[translationState.currentSentenceIndex]}
-                </p>
+                <div className="space-y-4">
+                  <div>
+                    <h4 className="font-medium text-blue-700 dark:text-blue-300 mb-1">Câu gốc tiếng Việt:</h4>
+                    <p className="text-gray-700 dark:text-gray-300">
+                      {translationState.sentences[translationState.currentSentenceIndex]}
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-blue-700 dark:text-blue-300 mb-1">Câu dịch tiếng Anh:</h4>
+                    <p className="text-gray-700 dark:text-gray-300">
+                      {translationState.translations[translationState.currentSentenceIndex]}
+                    </p>
+                  </div>
+                  <div className="border-t border-blue-200 dark:border-blue-800 pt-2">
+                    <div className="mb-2">
+                      <h4 className="font-medium text-blue-700 dark:text-blue-300 mb-1">1. Lỗi ngữ pháp:</h4>
+                      <p className="text-gray-700 dark:text-gray-300 whitespace-pre-line">
+                        {translationState.feedback[translationState.currentSentenceIndex].split('**1. Lỗi ngữ pháp (Grammar errors):**')[1]?.split('**2.')[0] || 'Không có lỗi ngữ pháp.'}
+                      </p>
+                    </div>
+                    <div className="mb-2">
+                      <h4 className="font-medium text-blue-700 dark:text-blue-300 mb-1">2. Thiếu dấu câu:</h4>
+                      <p className="text-gray-700 dark:text-gray-300 whitespace-pre-line">
+                        {translationState.feedback[translationState.currentSentenceIndex].split('**2. Thiếu dấu câu (Missing punctuation):**')[1]?.split('**3.')[0] || 'Không thiếu dấu câu.'}
+                      </p>
+                    </div>
+                    <div className="mb-2">
+                      <h4 className="font-medium text-blue-700 dark:text-blue-300 mb-1">3. Đề xuất sửa lỗi:</h4>
+                      <p className="text-gray-700 dark:text-gray-300 whitespace-pre-line">
+                        {translationState.feedback[translationState.currentSentenceIndex].split('**3. Đề xuất sửa lỗi (Suggested corrections):**')[1]?.split('**4.')[0] || 'Không có đề xuất sửa lỗi.'}
+                      </p>
+                    </div>
+                    <div>
+                      <h4 className="font-medium text-blue-700 dark:text-blue-300 mb-1">4. Mức độ chính xác tổng thể:</h4>
+                      <p className="text-gray-700 dark:text-gray-300 whitespace-pre-line">
+                        {translationState.feedback[translationState.currentSentenceIndex].split('**4. Mức độ chính xác tổng thể (Overall accuracy):**')[1]?.split('---')[0] || 'Chưa có đánh giá.'}
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             )}
 
